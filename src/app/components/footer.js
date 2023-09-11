@@ -6,11 +6,11 @@ import React from "react";
 
 const Footer = () => {
     return ( 
-        <Stack direction={'row'}>
-            <FaFacebook />
-            <FaInstagram />
-            <FaTwitter />
-            <FaYoutube />
+        <Stack direction={'row'} m={'auto'}>
+            <FaFacebook boxSize={10} />
+            <FaInstagram boxSize={10} />
+            <FaTwitter boxSize={10} />
+            <FaYoutube boxSize={10} />
         </Stack>
      );
 }
