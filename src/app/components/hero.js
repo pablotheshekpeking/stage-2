@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <Flex
       w={'full'}
-      h={'100vh'}
+      h={'90vh'}
       backgroundImage={
         'url(https://static-prod.adweek.com/wp-content/uploads/2019/05/john-wick-poster-qa-hed-page-2019.jpg)'
       }
@@ -18,7 +18,7 @@ export default function Hero() {
         <Box width={'20px'}></Box>
         <Box>
           <Navbar />
-          <Stack maxW={'2xl'} spacing={6} mt={'40%'} className='hero-info'>
+          <Stack maxW={'2xl'} spacing={6} mt={'20%'} className='hero-info' ml={['', '', '100px', '100px']}>
             <Heading
               color={'white'}
               fontWeight={700}

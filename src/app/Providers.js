@@ -2,7 +2,9 @@
 'use client'
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
-import  Hero  from './components/hero';
+import { Stack, Box } from "@chakra-ui/react";
+import Hero from './components/hero';
+import Card from './components/card'
 
 export function Providers({ children }) {
   return (
@@ -10,6 +12,21 @@ export function Providers({ children }) {
       <ChakraProvider>
 
         <Hero />
+
+        <Stack direction={'row'} ml={'100px'} mr={'100px'}>
+          <Box>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+        </Stack>
 
       </ChakraProvider>
     </CacheProvider>

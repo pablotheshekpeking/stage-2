@@ -1,50 +1,49 @@
 'use client'
-import { Box, Stack, Img, Heading, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { Box, Stack, Img, Heading, Text, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { SearchIcon, HamburgerIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
     return (
 
-        <Stack direction={'row'}>
-            <Box width={'20px'}></Box>
-            <Box className='navbar'>
+        <Stack direction={'row'} w={'100%'} ml={['', '', '100px', '100px']} mt={'20px'}>
+            <Box className='logo'>
                 <Stack direction={'row'}>
                     <Box>
-                        <Stack direction={'row'} className='logo'>
-                            <Img src='' />
-                            <Heading color={'white'}>
-                                MovieBox
-                            </Heading>
-                        </Stack>
+                        <Img />
                     </Box>
-
-
-                    {/** search bar */}
                     <Box>
-                        <InputGroup>
-                            <Input type='tel' placeholder='What do you want to watch?' width={'100%'} />
-                            <InputRightElement pointerEvents='none'>
-                                <SearchIcon color='gray.300' />
-                            </InputRightElement>
-                        </InputGroup>
+                        <Heading color={'white'}>
+                            MovieBox
+                        </Heading>
                     </Box>
+                </Stack>
+            </Box>
 
 
-                    <Stack>
+            {/** search bar */}
+            <Box ml={'20%'} mr={'20%'}>
+                <InputGroup>
+                    <Input type='tel' placeholder='What do you want to watch?' width={'500px'} border={'2px'} color={'white'} />
+                    <InputRightElement pointerEvents='none'>
+                        <SearchIcon color='white' />
+                    </InputRightElement>
+                </InputGroup>
+            </Box>
+
+            <Box>
+                <Stack direction={'row'}>
                     <Box>
-                        <Text>
+                        <Text color={'white'}>
                             Sign in
                         </Text>
                     </Box>
                     <Box>
                         <HamburgerIcon borderRadius={'30px'} bg={'red.500'} color={'white'} />
                     </Box>
-                    </Stack>
-
-
                 </Stack>
             </Box>
-            <Box width={'20px'}></Box>
+
+
         </Stack>
     );
 }
