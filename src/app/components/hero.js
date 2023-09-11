@@ -22,7 +22,7 @@ export default function Hero() {
               <Stack direction={'row'}>
                 <Stack direction={'row'} className='logo'>
                   <Img src='' />
-                  <Heading>
+                  <Heading color={'white'}>
                     MovieBox
                   </Heading>
                 </Stack>
