@@ -1,7 +1,8 @@
 'use client'
 
 import { Stack, Flex, Box, Img, Button, Heading, Input, InputGroup, InputRightElement, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
-import { SearchIcon } from '@chakra-ui/icons';
+import Navbar from './navbar';
+
 
 export default function Hero() {
   return (
@@ -16,30 +17,7 @@ export default function Hero() {
       <Stack direction={'row'}>
         <Box width={'20px'}></Box>
         <Box>
-          <Stack direction={'row'}>
-            <Box width={'20px'}></Box>
-            <Box className='navbar'>
-              <Stack direction={'row'}>
-                <Stack direction={'row'} className='logo'>
-                  <Img src='' />
-                  <Heading color={'white'}>
-                    MovieBox
-                  </Heading>
-                </Stack>
-
-                {/** search bar */}
-                <InputGroup>
-                  <Input type='tel' placeholder='What do you want to watch?' />
-                  <InputRightElement pointerEvents='none'>
-                    <SearchIcon color='gray.300' />
-                  </InputRightElement>
-                </InputGroup>
-
-
-              </Stack>
-            </Box>
-            <Box width={'20px'}></Box>
-          </Stack>
+          <Navbar />
           <Stack maxW={'2xl'} spacing={6} mt={'40%'} className='hero-info'>
             <Heading
               color={'white'}
