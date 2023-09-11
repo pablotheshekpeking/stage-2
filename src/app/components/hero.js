@@ -1,7 +1,7 @@
 'use client'
 
 import { Stack, Flex, Box, Img, Button, Heading, Input, InputGroup, InputRightElement, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons';
 import Navbar from './navbar';
 
 
@@ -53,7 +53,7 @@ export default function Hero() {
             Featured Movie
           </Heading>
         </Box>
-        <Box>
+        <Box float={'right'}>
           <Text color={'red.500'}>
             <a href="http://">See more </a> <ChevronRightIcon color={'red.500'} />
           </Text>
