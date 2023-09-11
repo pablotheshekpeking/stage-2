@@ -15,7 +15,7 @@ export default function Hero() {
       <Stack direction={'row'}>
         <Box width={'20px'}></Box>
         <Box>
-          <Stack maxW={'2xl'} spacing={6} justify={'center'}>
+          <Stack maxW={'2xl'} spacing={6} mt={'40%'}>
             <Heading
               color={'white'}
               fontWeight={700}
