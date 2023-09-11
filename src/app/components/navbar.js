@@ -21,9 +21,9 @@ const Navbar = () => {
 
 
             {/** search bar */}
-            <Box ml={'20%'} mr={'20%'}>
+            <Box ml={['', '', '20%', '20%']} mr={['', '', '20%', '20%']}>
                 <InputGroup>
-                    <Input type='tel' placeholder='What do you want to watch?' width={['50px', '200px', '500px', '500px']} border={'2px'} color={'white'} />
+                    <Input type='tel' placeholder='What do you want to watch?' width={['50px', '400px', '500px', '500px']} border={'2px'} color={'white'} />
                     <InputRightElement pointerEvents='none'>
                         <SearchIcon color='white' />
                     </InputRightElement>
