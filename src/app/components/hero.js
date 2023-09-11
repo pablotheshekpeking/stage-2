@@ -1,6 +1,6 @@
 'use client'
 
-import { Stack, Flex, Button, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
+import { Stack, Flex, Box, Button, Heading, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
 
 export default function Hero() {
   return (
@@ -17,30 +17,34 @@ export default function Hero() {
         justify={'center'}
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-        <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
-          <Text
-            color={'white'}
-            fontWeight={700}
-            lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
-          </Text>
-          <Stack direction={'row'}>
-            <Button
-              bg={'blue.400'}
-              rounded={'full'}
-              color={'white'}
-              _hover={{ bg: 'red.500' }}>
-              Show me more
-            </Button>
-            {/*<Button
-              bg={'whiteAlpha.300'}
-              rounded={'full'}
-              color={'white'}
-              _hover={{ bg: 'whiteAlpha.500' }}>
-              Show me more
-            </Button> */}
-          </Stack>
+        <Stack direction={'row'}>
+          <Box width={'20px'}></Box>
+          <Box>
+            <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
+              <Heading
+                color={'white'}
+                fontWeight={700}
+                lineHeight={1.2}
+                fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
+                John Wick 3: Parabellum
+              </Heading>
+              <Text>
+                John Wick is on the run after killing a memeber of the international 
+                assasins' guild and with a $14 million price tag on his head, he is the target 
+                of hit men and women everywhere.
+              </Text>
+              <Stack direction={'row'}>
+                <Button
+                  bg={'blue.400'}
+                  rounded={'full'}
+                  color={'white'}
+                  _hover={{ bg: 'red.500' }}>
+                  Show me more
+                </Button>
+              </Stack>
+            </Stack>
+          </Box>
+          <Box width={'20px'}></Box>
         </Stack>
       </VStack>
     </Flex>
