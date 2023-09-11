@@ -22,7 +22,7 @@ const Navbar = () => {
                     {/** search bar */}
                     <Box>
                         <InputGroup>
-                            <Input type='tel' placeholder='What do you want to watch?' width={'100&'} />
+                            <Input type='tel' placeholder='What do you want to watch?' width={'100%'} />
                             <InputRightElement pointerEvents='none'>
                                 <SearchIcon color='gray.300' />
                             </InputRightElement>
