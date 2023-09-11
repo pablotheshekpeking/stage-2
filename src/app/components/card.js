@@ -8,7 +8,7 @@ const Card = () => {
             <Box mb={'20px'} w={'full'}
                 h={'400px'}
                 backgroundImage={
-                    'url(https://static-prod.adweek.com/wp-content/uploads/2019/05/john-wick-poster-qa-hed-page-2019.jpg)'
+                    'url(batman.jpeg)'
                 }
                 backgroundSize={'cover'}
                 backgroundPosition={'center center'}>

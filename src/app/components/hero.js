@@ -1,17 +1,16 @@
 'use client'
 
 import { Stack, Flex, Box, Img, Button, Heading, Input, InputGroup, InputRightElement, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import Navbar from './navbar';
 
 
 export default function Hero() {
   return (
-    <Flex
+    <><Flex
       w={'full'}
       h={'90vh'}
-      backgroundImage={
-        'url(https://static-prod.adweek.com/wp-content/uploads/2019/05/john-wick-poster-qa-hed-page-2019.jpg)'
-      }
+      backgroundImage={'url(https://static-prod.adweek.com/wp-content/uploads/2019/05/john-wick-poster-qa-hed-page-2019.jpg)'}
       backgroundSize={'cover'}
       backgroundPosition={'center center'}>
       <Stack direction={'row'}>
@@ -45,5 +44,21 @@ export default function Hero() {
         <Box width={'20px'}></Box>
       </Stack>
     </Flex>
+
+
+    {/** featured movies */}
+    <Stack direction={'row'} mr={'100px'} ml={'100px'} mt={'100px'} mb={'100px'}>
+        <Box>
+          <Heading>
+            Featured Movie
+          </Heading>
+        </Box>
+        <Box>
+          <Text color={'red.500'}>
+            <a href="http://">See more </a> <ChevronRightIcon color={'red.500'} />
+          </Text>
+        </Box>
+      </Stack>
+      </>
   )
 }
