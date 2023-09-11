@@ -34,7 +34,7 @@ const Navbar = () => {
                 <Stack direction={'row'}>
                     <Box>
                         <Text color={'white'}>
-                            Sign-in
+                            Sign
                         </Text>
                     </Box>
                     <Box>
