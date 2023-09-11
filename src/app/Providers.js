@@ -13,7 +13,37 @@ export function Providers({ children }) {
 
         <Hero />
 
-        <Stack direction={'row'} ml={'100px'} mr={'100px'}>
+        <Stack direction={'row'} ml={'100px'} mr={'100px'} className='g1'>
+          <Box>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+        </Stack>
+
+        <Stack direction={'row'} ml={'100px'} mr={'100px'} className='g2'>
+          <Box>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+          <Box ml={'50px'}>
+            <Card />
+          </Box>
+        </Stack>
+
+        <Stack direction={'row'} ml={'100px'} mr={'100px'} className='g3'>
           <Box>
             <Card />
           </Box>
