@@ -12,7 +12,7 @@ const Navbar = () => {
                         <Img />
                     </Box>
                     <Box>
-                        <Heading color={'white'}>
+                        <Heading color={'white'} fontSize={['20px', '20px', '30px', '30px']}>
                             MovieBox
                         </Heading>
                     </Box>
@@ -31,7 +31,7 @@ const Navbar = () => {
             </Box>
 
             <Box>
-                <Stack direction={'row'}>
+                <Stack direction={'row'} justify={'space-between'}>
                     <Box>
                         <Text color={'white'}>
                             Sign in
