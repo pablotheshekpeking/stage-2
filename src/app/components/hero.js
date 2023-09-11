@@ -15,7 +15,7 @@ export default function Hero() {
       <Stack direction={'row'}>
         <Box width={'20px'}></Box>
         <Box>
-          <Stack maxW={'2xl'} spacing={6}>
+          <Stack maxW={'2xl'} spacing={6} justify={'center'}>
             <Heading
               color={'white'}
               fontWeight={700}
@@ -34,7 +34,7 @@ export default function Hero() {
                 rounded={'full'}
                 color={'white'}
                 _hover={{ bg: 'red.500' }}>
-                Show me more
+                Watch Trailer
               </Button>
             </Stack>
           </Stack>
