@@ -24,7 +24,7 @@ export function Providers({ children }) {
           <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
-          <Box ml={['10px', '10px', '50px', '50px']}>
+          <Box ml={['10px', '10px', '50px', '50px']} display={['none', 'none', 'inline', 'inline']}>
             <Card />
           </Box>
         </Stack>
