@@ -7,7 +7,7 @@ const Card = () => {
     return (
         <Stack direction={'column'}>
             <Box mb={'20px'} w={'full'}
-                h={'400px'}
+                h={['200px', '200px', '400px', '400px']}
                 backgroundImage={
                     'url(batman.jpeg)'
                 }
