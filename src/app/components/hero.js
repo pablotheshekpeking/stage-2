@@ -12,41 +12,35 @@ export default function Hero() {
       }
       backgroundSize={'cover'}
       backgroundPosition={'center center'}>
-      <VStack
-        w={'full'}
-        justify={'center'}
-        px={useBreakpointValue({ base: 4, md: 8 })}
-        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-        <Stack direction={'row'}>
-          <Box width={'20px'}></Box>
-          <Box>
-            <Stack maxW={'2xl'} spacing={6}>
-              <Heading
+      <Stack direction={'row'}>
+        <Box width={'20px'}></Box>
+        <Box>
+          <Stack maxW={'2xl'} spacing={6}>
+            <Heading
+              color={'white'}
+              fontWeight={700}
+              lineHeight={1.2}
+              fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
+              John Wick 3: Parabellum
+            </Heading>
+            <Text color={'white'}>
+              John Wick is on the run after killing a memeber of the international
+              assasins' guild and with a $14 million price tag on his head, he is the target
+              of hit men and women everywhere.
+            </Text>
+            <Stack direction={'row'}>
+              <Button
+                bg={'red.400'}
+                rounded={'full'}
                 color={'white'}
-                fontWeight={700}
-                lineHeight={1.2}
-                fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-                John Wick 3: Parabellum
-              </Heading>
-              <Text color={'white'}>
-                John Wick is on the run after killing a memeber of the international 
-                assasins' guild and with a $14 million price tag on his head, he is the target 
-                of hit men and women everywhere.
-              </Text>
-              <Stack direction={'row'}>
-                <Button
-                  bg={'red.400'}
-                  rounded={'full'}
-                  color={'white'}
-                  _hover={{ bg: 'red.500' }}>
-                  Show me more
-                </Button>
-              </Stack>
+                _hover={{ bg: 'red.500' }}>
+                Show me more
+              </Button>
             </Stack>
-          </Box>
-          <Box width={'20px'}></Box>
-        </Stack>
-      </VStack>
+          </Stack>
+        </Box>
+        <Box width={'20px'}></Box>
+      </Stack>
     </Flex>
   )
 }
