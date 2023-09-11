@@ -17,6 +17,7 @@ export default function Hero() {
         {/* Add an overlay with a semi-transparent background color */}
         <Box
           position="absolute"
+          zIndex={-1}
           top="0"
           left="0"
           width="100%"
