@@ -14,12 +14,13 @@ export default function Hero() {
       backgroundPosition={'center center'}>
       <VStack
         w={'full'}
+        justify={'center'}
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
         <Stack direction={'row'}>
           <Box width={'20px'}></Box>
           <Box>
-            <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
+            <Stack maxW={'2xl'} spacing={6}>
               <Heading
                 color={'white'}
                 fontWeight={700}
