@@ -14,7 +14,6 @@ export default function Hero() {
       backgroundPosition={'center center'}>
       <VStack
         w={'full'}
-        justify={'center'}
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
         <Stack direction={'row'}>
@@ -28,14 +27,14 @@ export default function Hero() {
                 fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
                 John Wick 3: Parabellum
               </Heading>
-              <Text>
+              <Text color={'white'}>
                 John Wick is on the run after killing a memeber of the international 
                 assasins' guild and with a $14 million price tag on his head, he is the target 
                 of hit men and women everywhere.
               </Text>
               <Stack direction={'row'}>
                 <Button
-                  bg={'blue.400'}
+                  bg={'red.400'}
                   rounded={'full'}
                   color={'white'}
                   _hover={{ bg: 'red.500' }}>
