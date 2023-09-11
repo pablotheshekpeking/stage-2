@@ -7,14 +7,14 @@ import React from "react";
 const Footer = () => {
     return (
         <>
-            <Stack direction={'row'} ml={'45%'} mb={'20px'}>
+            <Stack direction={'row'} ml={'45%'} mb={'50px'}>
                 <FaFacebook />
                 <FaInstagram />
                 <FaTwitter />
                 <FaYoutube />
             </Stack>
 
-            <Stack direction={'row'} textAlign={'center'} mb={'20px'}>
+            <Stack direction={'row'} textAlign={'center'} mb={'50px'}>
                 <Box w={'33%'}>
                     <Text textAlign={'center'}>
                         Conditions of Use
@@ -32,7 +32,7 @@ const Footer = () => {
                 </Box>
             </Stack>
 
-            <Stack textAlign={'center'} mb={'20px'}>
+            <Stack textAlign={'center'} mb={'50px'}>
                 <Text textAlign={'center'}>
                     2021 MovieBox by Adriana Eka Prayduha 
                 </Text>
