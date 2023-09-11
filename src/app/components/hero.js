@@ -47,7 +47,7 @@ export default function Hero() {
 
 
     {/** featured movies */}
-    <Stack direction={'row'} w={'100%'} mr={'100px'} ml={'100px'} mt={'100px'} mb={'100px'}>
+    <Stack direction={'row'} mr={'100px'} ml={'100px'} mt={'100px'} mb={'100px'}>
         <Box w={'50%'}>
           <Heading>
             Featured Movie
