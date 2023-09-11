@@ -5,7 +5,7 @@ import { SearchIcon, HamburgerIcon } from '@chakra-ui/icons';
 const Navbar = () => {
     return (
 
-        <Stack direction={'row'} w={'100%'} ml={['', '', '100px', '100px']} mt={'20px'}>
+        <Stack direction={['column', 'column', 'row', 'row']} w={'100%'} ml={['', '', '100px', '100px']} mt={'20px'}>
             <Box className='logo'>
                 <Stack direction={'row'}>
                     <Box>
@@ -23,7 +23,7 @@ const Navbar = () => {
             {/** search bar */}
             <Box ml={'20%'} mr={'20%'}>
                 <InputGroup>
-                    <Input type='tel' placeholder='What do you want to watch?' width={'500px'} border={'2px'} color={'white'} />
+                    <Input type='tel' placeholder='What do you want to watch?' width={['50px', '200px', '500px', '500px']} border={'2px'} color={'white'} />
                     <InputRightElement pointerEvents='none'>
                         <SearchIcon color='white' />
                     </InputRightElement>
