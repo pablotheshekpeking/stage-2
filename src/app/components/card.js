@@ -13,7 +13,7 @@ const Card = () => {
                 }
                 backgroundSize={'cover'}
                 backgroundPosition={'center center'}>
-                    <CheckCircleIcon float={'right'} />
+                    <CheckCircleIcon float={'right'} color={'white'} mt={'20px'} boxSize={6} mr={'20px'} />
             </Box>
             <Box>
                 <Text color={'#dddddd'} mb={'20px'}>USA, 2005</Text>
