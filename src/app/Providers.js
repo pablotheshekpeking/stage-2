@@ -18,13 +18,13 @@ export function Providers({ children }) {
           <Box>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
         </Stack>
@@ -33,13 +33,13 @@ export function Providers({ children }) {
           <Box>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
         </Stack>
@@ -48,13 +48,13 @@ export function Providers({ children }) {
           <Box>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
-          <Box ml={'50px'}>
+          <Box ml={['10px', '10px', '50px', '50px']}>
             <Card />
           </Box>
         </Stack>
