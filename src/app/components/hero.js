@@ -73,7 +73,7 @@ export default function Hero() {
         mb={['50px', '50px', '100px', '100px']}
       >
         <Box w={'50%'}>
-          <Heading fontSize={['12px', '30px', '30px', '30px']}>
+          <Heading fontSize={['30px', '30px', '30px', '30px']}>
             Featured Movie
           </Heading>
         </Box>
