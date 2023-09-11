@@ -8,9 +8,9 @@ const Footer = () => {
     return ( 
         <Stack direction={'row'}  ml={'45%'}>
             <FaFacebook />
-            <FaInstagram />
-            <FaTwitter />
-            <FaYoutube />
+            <FaInstagram ml={'10%'} />
+            <FaTwitter ml={'10%'} />
+            <FaYoutube ml={'10%'} />
         </Stack>
      );
 }
