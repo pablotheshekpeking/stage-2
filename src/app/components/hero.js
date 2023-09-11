@@ -17,7 +17,6 @@ export default function Hero() {
         {/* Add an overlay with a semi-transparent background color */}
         <Box
           position="absolute"
-          zIndex={-1}
           top="0"
           left="0"
           width="100%"
@@ -25,7 +24,7 @@ export default function Hero() {
           backgroundColor="rgba(0, 0, 0, 0.5)" // Adjust the opacity (0.5 in this example)
         ></Box>
 
-        <Stack direction={'row'}>
+        <Stack direction={'row'} zIndex={1}>
           <Box width={'20px'}></Box>
           <Box>
             <Navbar />
