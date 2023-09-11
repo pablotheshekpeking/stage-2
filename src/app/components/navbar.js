@@ -31,7 +31,7 @@ const Navbar = () => {
             </Box>
 
             <Box>
-                <Stack direction={'row'} justify={'space-between'}>
+                <Stack direction={'row'}>
                     <Box>
                         <Text color={'white'}>
                             Sign-in
