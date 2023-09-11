@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { Stack, Box } from "@chakra-ui/react";
 import Hero from './components/hero';
 import Card from './components/card'
+import Footer from './components/footer';
 
 export function Providers({ children }) {
   return (
@@ -57,6 +58,8 @@ export function Providers({ children }) {
             <Card />
           </Box>
         </Stack>
+
+        <Footer />
 
       </ChakraProvider>
     </CacheProvider>
