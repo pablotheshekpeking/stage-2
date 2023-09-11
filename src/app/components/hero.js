@@ -50,7 +50,7 @@ export default function Hero() {
     {/** featured movies */}
     <Stack direction={'row'} mr={['', '', '100px', '100px']} ml={['', '', '100px', '100px']} mt={['50px', '50px', '100px', '100px']} mb={['50px', '50px', '100px', '100px']}>
         <Box w={'50%'}>
-          <Heading>
+          <Heading fontSize={['12px', '15px', '', '']}>
             Featured Movie
           </Heading>
         </Box>
