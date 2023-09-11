@@ -14,7 +14,7 @@ export function Providers({ children }) {
 
         <Hero />
 
-        <Stack direction={'row'} ml={['50px', '50px', '100px', '100px']} mr={['50px', '50px', '100px', '100px']} className='g1' mb={['50px', '50px', '100px', '100px']}>
+        <Stack direction={'row'} ml={['10px', '10px', '100px', '100px']} mr={['10px', '10px', '100px', '100px']} className='g1' mb={['50px', '50px', '100px', '100px']}>
           <Box>
             <Card />
           </Box>
@@ -29,7 +29,7 @@ export function Providers({ children }) {
           </Box>
         </Stack>
 
-        <Stack direction={'row'} ml={['50px', '50px', '100px', '100px']} mr={['50px', '50px', '100px', '100px']} className='g2' mb={['50px', '50px', '100px', '100px']}>
+        <Stack direction={'row'} ml={['10px', '10px', '100px', '100px']} mr={['10px', '10px', '100px', '100px']} className='g2' mb={['50px', '50px', '100px', '100px']}>
           <Box>
             <Card />
           </Box>
@@ -44,7 +44,7 @@ export function Providers({ children }) {
           </Box>
         </Stack>
 
-        <Stack direction={'row'} ml={['50px', '50px', '100px', '100px']} mr={['50px', '50px', '100px', '100px']} className='g3' mb={['50px', '50px', '100px', '100px']}>
+        <Stack direction={'row'} ml={['10px', '10px', '100px', '100px']} mr={['10px', '10px', '100px', '100px']} className='g3' mb={['50px', '50px', '100px', '100px']}>
           <Box>
             <Card />
           </Box>
