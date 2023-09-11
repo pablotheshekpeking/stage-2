@@ -54,7 +54,7 @@ export default function Hero() {
           </Heading>
         </Box>
         <Box w={'50%'}>
-          <Text color={'red.500'} textAlign={'right'}>
+          <Text color={'red.500'} textAlign={'right'} mt={'2px'}>
             <a href="http://">See more </a> <ChevronRightIcon color={'red.500'} />
           </Text>
         </Box>
