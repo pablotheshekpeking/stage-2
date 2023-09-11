@@ -2,6 +2,7 @@
 
 import { Stack, Flex, Box, Img, Button, Heading, Input, InputGroup, InputRightElement, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+import { FaPlayCircle } from 'react-icons/fa';
 import Navbar from './navbar';
 
 
@@ -36,7 +37,7 @@ export default function Hero() {
                 rounded={'full'}
                 color={'white'}
                 _hover={{ bg: 'red.500' }}>
-                Watch Trailer
+                <FaPlayCircle />  Watch Trailer
               </Button>
             </Stack>
           </Stack>
