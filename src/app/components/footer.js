@@ -1,6 +1,7 @@
 'use client'
 
 import { Stack, Heading, Text, Box } from "@chakra-ui/react";
+import { FaFacebook } from 'react-icons/fa';
 import React from "react";
 
 const Footer = () => {
