@@ -28,7 +28,7 @@ export function Providers({ children }) {
           </Box>
         </Stack>
 
-        <Stack direction={'row'} ml={'100px'} mr={'100px'} className='g2'>
+        <Stack direction={'row'} ml={'100px'} mr={'100px'} className='g2' mt={'100px'}>
           <Box>
             <Card />
           </Box>
@@ -43,7 +43,7 @@ export function Providers({ children }) {
           </Box>
         </Stack>
 
-        <Stack direction={'row'} ml={'100px'} mr={'100px'} className='g3'>
+        <Stack direction={'row'} ml={'100px'} mr={'100px'} className='g3' mt={'100px'}>
           <Box>
             <Card />
           </Box>
