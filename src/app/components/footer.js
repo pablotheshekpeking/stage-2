@@ -7,7 +7,7 @@ import React from "react";
 const Footer = () => {
     return (
         <>
-            <Stack direction={'row'} ml={['40%', '40%', '47%', '47%']} mb={'50px'}>
+            <Stack direction={'row'} ml={['39%', '39%', '47%', '47%']} mb={'50px'}>
                 <FaFacebook />
                 <FaInstagram />
                 <FaTwitter />
