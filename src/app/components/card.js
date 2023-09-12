@@ -1,4 +1,4 @@
-
+'use client'
 
 import { Text, Heading, Stack, Box } from "@chakra-ui/react";
 import { CheckCircleIcon } from '@chakra-ui/icons';
