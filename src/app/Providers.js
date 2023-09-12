@@ -2,10 +2,12 @@
 'use client'
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
-import { Stack, Box } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
+import React from 'react';
 import Hero from './components/hero';
 import Card from './components/card'
 import Footer from './components/footer';
+import MovieGrid from './components/MovieGrid';
 
 export function Providers({ children }) {
   return (
@@ -14,50 +16,7 @@ export function Providers({ children }) {
 
         <Hero />
 
-        <Stack direction={'row'} ml={['10px', '10px', '100px', '100px']} mr={['10px', '10px', '100px', '100px']} className='g1' mb={['50px', '50px', '100px', '100px']}>
-          <Box>
-            <Card />
-          </Box>
-          {/*<Box ml={['10px', '10px', '50px', '50px']}>
-            <Card />
-          </Box>
-          <Box ml={['10px', '10px', '50px', '50px']}>
-            <Card />
-          </Box>
-          <Box ml={['10px', '10px', '50px', '50px']} display={['none', 'none', 'inline', 'inline']}>
-            <Card />
-          </Box>*/}
-        </Stack>
-
-        {/*<Stack direction={'row'} ml={['10px', '10px', '100px', '100px']} mr={['10px', '10px', '100px', '100px']} className='g1' mb={['50px', '50px', '100px', '100px']}>
-          <Box>
-            <Card />
-          </Box>
-          <Box ml={['10px', '10px', '50px', '50px']}>
-            <Card />
-          </Box>
-          <Box ml={['10px', '10px', '50px', '50px']}>
-            <Card />
-          </Box>
-          <Box ml={['10px', '10px', '50px', '50px']} display={['none', 'none', 'inline', 'inline']}>
-            <Card />
-          </Box>
-        </Stack>
-
-        <Stack direction={'row'} ml={['10px', '10px', '100px', '100px']} mr={['10px', '10px', '100px', '100px']} className='g1' mb={['50px', '50px', '100px', '100px']}>
-          <Box>
-            <Card />
-          </Box>
-          <Box ml={['10px', '10px', '50px', '50px']}>
-            <Card />
-          </Box>
-          <Box ml={['10px', '10px', '50px', '50px']}>
-            <Card />
-          </Box>
-          <Box ml={['10px', '10px', '50px', '50px']} display={['none', 'none', 'inline', 'inline']}>
-            <Card />
-          </Box>
-        </Stack> */}
+        <MovieGrid />
 
         <Footer />
 
