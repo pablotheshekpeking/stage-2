@@ -1,5 +1,5 @@
 import { Text, Heading, Stack, Box } from "@chakra-ui/react";
-import Link from 'next/link';
+import { Link } from 'next/link';
 import { AiFillHeart } from 'react-icons/ai';
 import React, { useState } from "react";
 

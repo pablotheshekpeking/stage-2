@@ -4,7 +4,7 @@ import Sidebar from "./components/sidebar";
 import axios from "axios";
 import { useParams } from "react-router-dom"; // Import useParams from react-router-dom
 
-const Details = () => {
+const Details = ({ movie }) => {
     const [movieData, setMovieData] = useState(null);
     const { movieId } = useParams(); // Extract movieId from URL params
 
@@ -36,7 +36,7 @@ const Details = () => {
                         <Box>
                             <Stack direction={"column"}>
                                 <Box className="info">
-                                    <Text data-testid="movie-title">{movieData.title}</Text>
+                                    <Text data-testid="movie-title">{movie.title}</Text>
                                     <Text data-testid="movie-release-date">Release Date: {movieData.release_date}</Text>
                                     <Text className="PG">Rating: {movieData.vote_average}</Text>
                                     <Text className="runTime" data-testid="movie-runtime">Runtime: {movieData.runtime} minutes</Text>
