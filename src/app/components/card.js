@@ -2,11 +2,12 @@
 
 import { Text, Heading, Stack, Box } from "@chakra-ui/react";
 import { CheckCircleIcon } from '@chakra-ui/icons';
+import { AiFillHeart } from 'react-icons/ai';
 import React from "react";
 
 const Card = ({ movie }) => {
   return (
-    <Stack direction={'column'} data-testid="movie-card">
+    <a href="../details.js"><Stack direction={'column'} data-testid="movie-card">
       <Box
         mb={'20px'}
         w={'full'}
@@ -16,7 +17,7 @@ const Card = ({ movie }) => {
         backgroundPosition={'center center'}
         data-testid="movie-poster"
       >
-        <CheckCircleIcon float={'right'} color={'white'} mt={'20px'} boxSize={6} mr={'20px'} />
+        <AiFillHeart float={'right'} color={'white'} mt={'20px'} boxSize={6} mr={'20px'} />
       </Box>
       <Box>
         <Text color={'#dddddd'} mb={'10px'} data-testid="movie-release-date">
@@ -25,7 +26,7 @@ const Card = ({ movie }) => {
         <Text as={'h6'} mb={'10px'} data-testid="movie-title">{movie.title}</Text>
         <Text color={'#dddddd'}>{movie.genres?.map((genre) => genre.name).join(', ')}</Text>
       </Box>
-    </Stack>
+    </Stack></a>
   );
 }
 
