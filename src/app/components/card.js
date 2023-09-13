@@ -11,7 +11,7 @@ const Card = ({ movie }) => {
   };
 
   return (
-    <Link href={`../details?id=${movie.id}`}>
+    <Link href={`./details/details?id=${movie.id}`}>
       <a>
         <Stack direction={'column'} data-testid="movie-card">
           <Box
@@ -35,7 +35,7 @@ const Card = ({ movie }) => {
           </Box>
           <Box>
             <Text color={'#dddddd'} mb={'10px'} data-testid="movie-release-date">
-              {movie.release_date} 
+              {movie.release_date}
             </Text>
             <Text as={'h6'} mb={'10px'} data-testid="movie-title">{movie.title}</Text>
             <Text color={'#dddddd'}>{movie.genres?.map((genre) => genre.name).join(', ')}</Text>

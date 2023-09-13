@@ -34,7 +34,7 @@ const Footer = () => {
 
             <Stack textAlign={'center'} mb={'50px'}>
                 <Text textAlign={'center'}>
-                    2021 MovieBox by Adriana Eka Prayduha 
+                    2021 MovieBox by Ibuaku Michael Okechukwu 
                 </Text>
             </Stack>
         </>
