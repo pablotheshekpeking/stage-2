@@ -16,9 +16,10 @@ export function Providers({ children }) {
 
         <Hero />
 
-        <div style={{marginRight: ['', '', '10%', '10%'], marginLeft: ['', '', '10%', '10%'],}}>
+        <Stack mr={['', '', '10%', '10%']} ml={['', '', '10%', '10%']}>
           <MovieGrid />
-        </div>
+        </Stack>
+
 
 
         <Footer />
