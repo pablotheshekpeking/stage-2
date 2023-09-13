@@ -16,7 +16,10 @@ export function Providers({ children }) {
 
         <Hero />
 
-        <MovieGrid />
+        <div style={{marginRight: '10%', marginLeft: '10%',}}>
+          <MovieGrid />
+        </div>
+
 
         <Footer />
 
