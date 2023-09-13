@@ -1,17 +1,18 @@
-'use client'
-
 import { Text, Heading, Stack, Box } from "@chakra-ui/react";
-import Link from 'next/link'; // Import Link from 'next/link'
+import Link from 'next/link';
 import { AiFillHeart } from 'react-icons/ai';
-import React from "react";
+import React, { useState } from "react";
 
 const Card = ({ movie }) => {
-  // Construct the correct href for the details page
-  const href = `/details?id=${movie.id}`;
+  const [isClicked, setIsClicked] = useState(false);
+
+  const toggleHeartColor = () => {
+    setIsClicked(!isClicked);
+  };
 
   return (
-    <Link href={href}>
-      <a> {/* Wrap the contents in an anchor tag */}
+    <Link href={`../details?id=${movie.id}`}>
+      <a>
         <Stack direction={'column'} data-testid="movie-card">
           <Box
             mb={'20px'}
@@ -22,7 +23,15 @@ const Card = ({ movie }) => {
             backgroundPosition={'center center'}
             data-testid="movie-poster"
           >
-            <AiFillHeart style={{float: "right", marginTop: "20px", marginRight: "20px", color: "white"}} />
+            <AiFillHeart
+              style={{
+                float: "right",
+                marginTop: "20px",
+                marginRight: "20px",
+                color: isClicked ? "red" : "white" // Change color to red when clicked
+              }}
+              onClick={toggleHeartColor} // Toggle the color when clicked
+            />
           </Box>
           <Box>
             <Text color={'#dddddd'} mb={'10px'} data-testid="movie-release-date">
