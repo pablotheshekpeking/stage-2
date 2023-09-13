@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from "react";
 import { Stack, Img, Box, Text } from "@chakra-ui/react";
 import Sidebar from "./components/sidebar";
