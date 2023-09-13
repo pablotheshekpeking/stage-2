@@ -7,7 +7,7 @@ import React from "react";
 
 const Card = ({ movie }) => {
   return (
-    <a href="../details.js"><Stack direction={'column'} data-testid="movie-card">
+    <a href="../details"><Stack direction={'column'} data-testid="movie-card">
       <Box
         mb={'20px'}
         w={'full'}
@@ -17,7 +17,7 @@ const Card = ({ movie }) => {
         backgroundPosition={'center center'}
         data-testid="movie-poster"
       >
-        <AiFillHeart float={'right'} color={'white'} mt={'20px'} boxSize={6} mr={'20px'} />
+        <AiFillHeart style={{float: "right", marginTop: "20px", marginBottom: "20px",}} />
       </Box>
       <Box>
         <Text color={'#dddddd'} mb={'10px'} data-testid="movie-release-date">
