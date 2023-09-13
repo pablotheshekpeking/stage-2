@@ -11,7 +11,7 @@ const Card = ({ movie }) => {
   };
 
   return (
-    <Link href={`./details/details`}>
+    <Link href={`./details/details?id=${movie.id}`}>
       <a>
         <Stack direction={'column'} data-testid="movie-card">
           <Box
