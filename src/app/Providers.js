@@ -16,9 +16,7 @@ export function Providers({ children }) {
 
         <Hero />
 
-        <Stack mr={['', '', '10%', '10%']} ml={['', '', '10%', '10%']}>
-          <MovieGrid />
-        </Stack>
+        <MovieGrid mr={['', '', '10%', '10%']} ml={['', '', '10%', '10%']} />
 
 
 
