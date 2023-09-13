@@ -1,5 +1,7 @@
+'use client'
+
 import { Text, Heading, Stack, Box } from "@chakra-ui/react";
-import { Link } from 'next/link';
+import  Link  from 'next/link';
 import { AiFillHeart } from 'react-icons/ai';
 import React, { useState } from "react";
 
@@ -11,8 +13,7 @@ const Card = ({ movie }) => {
   };
 
   return (
-    <Link href={`../pages/details?id=${movie.id}`}>
-      <a>
+    <Link href={`/details?id=${movie.id}`}>
         <Stack direction={'column'} data-testid="movie-card">
           <Box
             mb={'20px'}
@@ -41,7 +42,6 @@ const Card = ({ movie }) => {
             <Text color={'#dddddd'}>{movie.genres?.map((genre) => genre.name).join(', ')}</Text>
           </Box>
         </Stack>
-      </a>
     </Link>
   );
 }
