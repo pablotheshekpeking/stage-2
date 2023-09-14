@@ -42,7 +42,6 @@ export default async function MoviePage({ params }) {
         <Stack direction={'row'}>
           <Hide below='md'>
             <Box
-              display={{ base: 'none', md: 'block' }}
               width={'15%'}
               h={'auto'}
 
