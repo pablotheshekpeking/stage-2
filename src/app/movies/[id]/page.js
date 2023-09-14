@@ -424,6 +424,7 @@ export default async function MoviePage({ params }) {
                     borderRadius={'10px'}
                     w={'full'}
                     h={'50px'}
+                    mt={'100%'}
                     bg={'rgba(18, 18, 18, 0.50)'}
                     backdropFilter={'blur(2px)'}
 
@@ -432,7 +433,6 @@ export default async function MoviePage({ params }) {
 
                       color={'#E8E8E8'}
                       fontSize={'14px'}
-                      mt={'100%'}
 
                       fontWeight={'500'}
                     >
