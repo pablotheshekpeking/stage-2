@@ -340,7 +340,7 @@ export default async function MoviePage({ params }) {
 
                       fontWeight={'500'} m={'auto'}
                     >
-                      Top rated movie {movie.id}
+                      Top rated movie #{movie.id}
                     </Text>
 
                   </Box>
@@ -405,7 +405,7 @@ export default async function MoviePage({ params }) {
                 <Box
                   borderRadius={'10px'}
                   pt={'180px'}
-                  mt={'10'}
+                  mt={'100%'}
                   w={'full'}
                   bgImage="url('/rect.png')"
                   bgPosition="50% 50%"
