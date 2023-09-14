@@ -5,7 +5,7 @@ import {
   Stack,
   Text,
   Center,
-  Show,
+  Hide,
   Heading,
   Button,
 } from "@chakra-ui/react";
@@ -40,7 +40,7 @@ export default async function MoviePage({ params }) {
 
         bg={'white'}>
         <Stack direction={'row'}>
-          <Show above='md'>
+          <Hide below='md'>
             <Box
 
               width={'15%'}
@@ -191,7 +191,7 @@ export default async function MoviePage({ params }) {
               </Stack>
 
             </Box>
-          </Show>
+          </Hide>
 
           <Box
 
