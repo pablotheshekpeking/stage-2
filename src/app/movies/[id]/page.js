@@ -13,7 +13,8 @@ import {
 import { AiOutlineUnorderedList } from "react-icons/ai";
 
 import { GiTicket } from "react-icons/gi";
-import { BsFillPlayFill } from "react-icons/bs"
+import { BsFillPlayFill } from "react-icons/bs";
+import Link from "next/link";
 
 async function getMovie(movieId) {
   const apiKey = '259375f90a3851d4993f308d06743823';
@@ -58,7 +59,7 @@ export default async function MoviePage({ params }) {
                 spacing={'50'}
                 px={'5'}
               >
-                <Box
+                <Link href={'../'}><Box
                   m={'auto'}
                   width={'full'}
                   h={'50px'}
@@ -72,7 +73,7 @@ export default async function MoviePage({ params }) {
                   <Text fontWeight={"700"} fontSize={"24px"} color={"black"}>
                     MovieBox
                   </Text>
-                </Box>
+                </Box></Link>
                 <Box
                   m={'auto'}
                   width={'full'}
