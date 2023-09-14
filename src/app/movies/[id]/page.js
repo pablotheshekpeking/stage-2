@@ -21,17 +21,30 @@ async function getMovie(movieId) {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
   );
+
+  // Check for HTTP 404 status to detect not found errors
+  if (res.status === 404) {
+    return { error: "Movie not found" };
+  }
+
   return await res.json();
 }
-// access movie id from param and fetch data 
 
 export default async function MoviePage({ params }) {
-
-
   const movieId = params.id;
 
   const movie = await getMovie(movieId);
   const img = `https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path}`
+
+  if (movie.error) {
+    // Render an error message if the movie is not found
+    return (
+      <div>
+        <h1>Movie Not Found</h1>
+        <p>The requested movie does not exist.</p>
+      </div>
+    );
+  }
   return (
 
     <>
