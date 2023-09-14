@@ -49,6 +49,7 @@ export default async function MoviePage({ params }) {
               bg={'white'}
               borderRadius={'0px 45px 45px 0px;'}
               border={'1px solid rgba(0, 0, 0, 0.30)'}
+              display={['none', 'none', 'inline', 'inline']}
             >
 
               <Stack
