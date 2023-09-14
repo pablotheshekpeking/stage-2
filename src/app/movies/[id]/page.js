@@ -5,7 +5,7 @@ import {
   Stack,
   Text,
   Center,
-  Hide,
+  Show,
   Heading,
   Button,
 } from "@chakra-ui/react";
@@ -40,7 +40,7 @@ export default async function MoviePage({ params }) {
 
         bg={'white'}>
         <Stack direction={'row'}>
-          <Hide below="lg">
+          <Show above='md'>
             <Box
 
               width={'15%'}
@@ -191,7 +191,7 @@ export default async function MoviePage({ params }) {
               </Stack>
 
             </Box>
-          </Hide>
+          </Show>
 
           <Box
 
@@ -378,31 +378,31 @@ export default async function MoviePage({ params }) {
               >
                 <Stack direction={'column'}>
                   <Box w={'100%'}><Button
-                  mt={'10'}
-                  bg={'#BE123C'}
-                  h={'55px'}
-                  w={'100%'}
-                  borderRadius={'10px'}
-                  border={'1px solid #BE123C'}
-                  color={'white'}
-                  textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
-                  leftIcon={<GiTicket />}
-                >See Showtimes</Button></Box>
+                    mt={'10'}
+                    bg={'#BE123C'}
+                    h={'55px'}
+                    w={'100%'}
+                    borderRadius={'10px'}
+                    border={'1px solid #BE123C'}
+                    color={'white'}
+                    textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
+                    leftIcon={<GiTicket />}
+                  >See Showtimes</Button></Box>
                   <Box w={'100%'}><Button
-                  mt={'5'}
-                  bg={'rgba(190, 18, 60, 0.10)'}
-                  h={'55px'}
-                  w={'100%'}
-                  borderRadius={'10px'}
-                  border={'1px solid #BE123C'}
-                  color={'#333'}
-                  textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
-                  leftIcon={<AiOutlineUnorderedList />}
-                >More watch options</Button></Box>
+                    mt={'5'}
+                    bg={'rgba(190, 18, 60, 0.10)'}
+                    h={'55px'}
+                    w={'100%'}
+                    borderRadius={'10px'}
+                    border={'1px solid #BE123C'}
+                    color={'#333'}
+                    textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
+                    leftIcon={<AiOutlineUnorderedList />}
+                  >More watch options</Button></Box>
                 </Stack>
-                
 
-                
+
+
                 <Box
                   borderRadius={'10px'}
                   pt={'180px'}
