@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { Box, Stack, Text, Center, Heading, Button } from '@chakra-ui/react';
 import { AiOutlineUnorderedList } from 'react-icons/ai';
 import { GiTicket } from 'react-icons/gi';
