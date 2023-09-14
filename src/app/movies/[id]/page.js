@@ -1,35 +1,44 @@
 'use client'
-import Image from "next/image"
-import {
-  Box,
-  Stack,
-  Text,
-  Center,
-  Hide,
-  Heading,
-  Button,
-} from "@chakra-ui/react";
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { Box, Stack, Text, Center, Heading, Button } from '@chakra-ui/react';
+import { AiOutlineUnorderedList } from 'react-icons/ai';
+import { GiTicket } from 'react-icons/gi';
+import { BsFillPlayFill } from 'react-icons/bs';
 
-import { AiOutlineUnorderedList } from "react-icons/ai";
+export default function MoviePage() {
+  const router = useRouter();
+  const { id } = router.query;
+  const [movie, setMovie] = useState(null);
 
-import { GiTicket } from "react-icons/gi";
-import { BsFillPlayFill } from "react-icons/bs"
+  useEffect(() => {
+    async function getMovieData() {
+      try {
+        const apiKey = '259375f90a3851d4993f308d06743823'; // Replace with your TMDb API key
+        const response = await fetch(
+          `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
+        );
 
-async function getMovie(movieId) {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`
-  );
-  return await res.json();
-}
-// access movie id from param and fetch data 
+        if (response.status === 200) {
+          const movieData = await response.json();
+          setMovie(movieData);
+        } else {
+          setMovie(null);
+        }
+      } catch (error) {
+        console.error('Error fetching movie details:', error);
+        setMovie(null);
+      }
+    }
 
-export default async function MoviePage({ params }) {
+    if (id) {
+      getMovieData();
+    }
+  }, [id]);
 
+  const img = `https://image.tmdb.org/t/p/original/${movie?.backdrop_path || movie?.poster_path}`;
 
-  const movieId = params.id;
-
-  const movie = await getMovie(movieId);
-  const img = `https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path}`
   return (
 
     <>
