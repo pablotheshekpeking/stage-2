@@ -13,6 +13,7 @@ import {
 import { AiOutlineUnorderedList } from "react-icons/ai";
 
 import { GiTicket } from "react-icons/gi";
+import '../styles/styles.css';
 import { BsFillPlayFill } from "react-icons/bs";
 import Link from "next/link";
 
@@ -42,14 +43,13 @@ export default async function MoviePage({ params }) {
         <Stack direction={'row'}>
           <Hide below='md'>
             <Box
-
+              className="mobile-hide"
               width={'15%'}
               h={'auto'}
 
               bg={'white'}
               borderRadius={'0px 45px 45px 0px;'}
               border={'1px solid rgba(0, 0, 0, 0.30)'}
-              display={['none', 'none', 'inline', 'inline']}
             >
 
               <Stack
