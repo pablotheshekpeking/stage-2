@@ -52,7 +52,7 @@ export default async function MoviePage({ params }) {
         h={'auto'}
 
         bg={'white'}>
-        <Stack direction={'row'}>
+        <Stack direction={['column', 'column', 'row', 'row']}>
           <Hide below='md'>
             <Box
               width={'15%'}
@@ -65,7 +65,7 @@ export default async function MoviePage({ params }) {
 
               <Stack
                 m={'auto'}
-                direction={'column'}
+                direction={['row', 'row', 'column', 'column']}
                 w={'full'}
                 py={'50'}
                 spacing={'50'}
