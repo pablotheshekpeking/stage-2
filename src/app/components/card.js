@@ -21,7 +21,7 @@ const Card = ({ movie }) => {
             h={['200px', '200px', '400px', '400px']}
             backgroundImage={`url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`}
             backgroundSize={'cover'}
-            backgroundPosition={'center center'}
+            backgroundPosition={'center center'} 
             data-testid="movie-poster"
           >
             <AiFillHeart

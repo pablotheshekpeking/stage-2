@@ -1,44 +1,36 @@
-'use client'
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { Box, Stack, Text, Center, Heading, Button } from '@chakra-ui/react';
-import { AiOutlineUnorderedList } from 'react-icons/ai';
-import { GiTicket } from 'react-icons/gi';
-import { BsFillPlayFill } from 'react-icons/bs';
 
-export default function MoviePage() {
-  const router = useRouter();
-  const { id } = router.query;
-  const [movie, setMovie] = useState(null);
+import Image from "next/image"
+import {
+  Box,
+  Stack,
+  Text,
+  Center,
+  Hide,
+  Heading,
+  Button,
+} from "@chakra-ui/react";
 
-  useEffect(() => {
-    async function getMovieData() {
-      try {
-        const apiKey = '259375f90a3851d4993f308d06743823'; // Replace with your TMDb API key
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
-        );
+import { AiOutlineUnorderedList } from "react-icons/ai";
 
-        if (response.status === 200) {
-          const movieData = await response.json();
-          setMovie(movieData);
-        } else {
-          setMovie(null);
-        }
-      } catch (error) {
-        console.error('Error fetching movie details:', error);
-        setMovie(null);
-      }
-    }
+import { GiTicket } from "react-icons/gi";
+import { BsFillPlayFill } from "react-icons/bs"
 
-    if (id) {
-      getMovieData();
-    }
-  }, [id]);
+async function getMovie(movieId) {
+  const apiKey = '259375f90a3851d4993f308d06743823';
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
+  );
+  return await res.json();
+}
+// access movie id from param and fetch data 
 
-  const img = `https://image.tmdb.org/t/p/original/${movie?.backdrop_path || movie?.poster_path}`;
+export default async function MoviePage({ params }) {
 
+
+  const movieId = params.id;
+
+  const movie = await getMovie(movieId);
+  const img = `https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path}`
   return (
 
     <>
@@ -273,7 +265,7 @@ export default function MoviePage() {
                     data-testid="movie-runtime"
 
                   >
-                    {movie.runtime}
+                    {movie.runtime}m
                   </Text>
 
 
@@ -299,42 +291,30 @@ export default function MoviePage() {
 
                 <Text
                   data-testid="movie-overview"
-                  fontSize={'20px'}
+                  fontSize={'18px'}
                   fontWeight={'400'}
                   color={'#333'}
                   mt={'5'}
                 >
                   {movie.overview}
                 </Text>
-                <Text
-                  w={'full'}
-                  fontSize={'20px'}
-                  fontWeight={'400'}
-                  color={'#333'}
-                  display={'flex'}
-                  mt={'10'}
-                >
-                  Director : <Text color={'#BE123C'}>Joseph Kosinski</Text>
+                <Text w={'full'} fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} mt={'10'}>
+                  Director : <Text color={'#BE123C'}>{movie?.credits?.crew?.find(crew => crew.job === 'Director')?.name || 'N/A'}</Text>
                 </Text>
-                <Text
-                  fontSize={'20px'}
-                  fontWeight={'400'}
-                  color={'#333'}
-                  display={'flex'}
-                  mt={'10'}
-                >
-                  Writers : <Text color={'#BE123C'}> Jim Cash, Jack Epps Jr,  Peter Craig</Text>
+                <Text fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} mt={'10'}>
+                  Writers : <Text color={'#BE123C'}>
+                    {movie?.credits?.crew
+                      ?.filter(crew => crew.job === 'Screenplay' || crew.job === 'Writer')
+                      .map(writer => writer.name)
+                      .join(', ') || 'N/A'}
+                  </Text>
                 </Text>
-                <Text
-                  fontSize={'20px'}
-                  fontWeight={'400'}
-                  color={'#333'}
-                  display={'flex'}
-                  my={'10'}
-                >
-                  Stars
-                  : <Text color={'#BE123C'}> Tom Cruise, Jennifer Connelly, Miles Teller</Text>
+                <Text fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} my={'10'}>
+                  Stars : <Text color={'#BE123C'}>
+                    {movie?.credits?.cast?.slice(0, 3).map(actor => actor.name).join(', ') || 'N/A'}
+                  </Text>
                 </Text>
+
 
                 <Box
                   border={'1px solid #999'}
@@ -360,7 +340,7 @@ export default function MoviePage() {
 
                       fontWeight={'500'} m={'auto'}
                     >
-                      Top rated movie #65
+                      Top rated movie {movie.id}
                     </Text>
 
                   </Box>
@@ -395,29 +375,33 @@ export default function MoviePage() {
 
 
               >
-                <Button
+                <Stack direction={'column'}>
+                  <Box w={'100%'}><Button
                   mt={'10'}
                   bg={'#BE123C'}
                   h={'55px'}
-                  w={'full'}
+                  w={'100%'}
                   borderRadius={'10px'}
                   border={'1px solid #BE123C'}
                   color={'white'}
                   textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
                   leftIcon={<GiTicket />}
-                >See Showtimes</Button>
-
-                <Button
+                >See Showtimes</Button></Box>
+                  <Box w={'100%'}><Button
                   mt={'5'}
                   bg={'rgba(190, 18, 60, 0.10)'}
                   h={'55px'}
-                  w={'full'}
+                  w={'100%'}
                   borderRadius={'10px'}
                   border={'1px solid #BE123C'}
                   color={'#333'}
                   textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
                   leftIcon={<AiOutlineUnorderedList />}
-                >More watch options</Button>
+                >More watch options</Button></Box>
+                </Stack>
+                
+
+                
                 <Box
                   borderRadius={'10px'}
                   pt={'180px'}
