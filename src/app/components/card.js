@@ -19,7 +19,7 @@ const Card = ({ movie }) => {
           mb={'20px'}
           w={'full'}
           h={['200px', '200px', '400px', '400px']}
-          backgroundImage={`url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`}
+          backgroundImage={`url(https://image.tmdb.org/t/p/original${movie.poster_path})`}
           backgroundSize={'cover'}
           backgroundPosition={'center center'}
           data-testid="movie-poster"
