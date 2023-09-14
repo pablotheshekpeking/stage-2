@@ -405,7 +405,7 @@ export default async function MoviePage({ params }) {
                 <Box
                   borderRadius={'10px'}
                   pt={'180px'}
-                  mt={'100%'}
+                  mt={'10'}
                   w={'full'}
                   bgImage="url('/rect.png')"
                   bgPosition="50% 50%"
@@ -432,6 +432,7 @@ export default async function MoviePage({ params }) {
 
                       color={'#E8E8E8'}
                       fontSize={'14px'}
+                      mt={'100%'}
 
                       fontWeight={'500'}
                     >
