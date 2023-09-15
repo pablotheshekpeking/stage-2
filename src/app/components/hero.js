@@ -87,7 +87,6 @@ export default function Hero() {
 
       {/** featured movies */}
       <Stack
-      w={'100%'}
         direction={'row'}
         mr={['', '', '100px', '100px']}
         ml={['', '', '100px', '100px']}
