@@ -56,7 +56,7 @@ export default async function MoviePage({ params }) {
         bg={'white'}>
         <Stack direction={['column', 'column', 'row', 'row']}>
           {/** sidebar */}
-          <Hide below="lg"><Sidebar /></Hide>
+          <Hide below="md"><Sidebar /></Hide>
 
           {/** page content */}
           <Box
