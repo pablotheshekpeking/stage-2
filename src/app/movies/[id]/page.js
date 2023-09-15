@@ -54,7 +54,14 @@ export default async function MoviePage({ params }) {
 
         bg={'white'}>
         <Stack direction={['column', 'column', 'row', 'row']}>
-          <Box>
+          <Box
+          width={'15%'}
+          h={'auto'}
+
+          bg={'white'}
+          borderRadius={'0px 45px 45px 0px;'}
+          border={'1px solid rgba(0, 0, 0, 0.30)'}
+          >
             <Sidebar />
           </Box>
           {/** <Hide below='md'>
