@@ -15,6 +15,7 @@ import { AiOutlineUnorderedList } from "react-icons/ai";
 import { GiTicket } from "react-icons/gi";
 import { BsFillPlayFill } from "react-icons/bs";
 import Link from "next/link";
+import Sidebar from "@/app/components/sidebar";
 
 async function getMovie(movieId) {
   const apiKey = '259375f90a3851d4993f308d06743823';
@@ -53,7 +54,10 @@ export default async function MoviePage({ params }) {
 
         bg={'white'}>
         <Stack direction={['column', 'column', 'row', 'row']}>
-          <Hide below='md'>
+          <Box>
+            <Sidebar />
+          </Box>
+          {/** <Hide below='md'>
             <Box
               width={'15%'}
               h={'auto'}
@@ -203,7 +207,7 @@ export default async function MoviePage({ params }) {
               </Stack>
 
             </Box>
-          </Hide>
+          </Hide> */}
 
           <Box
 
