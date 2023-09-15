@@ -9,10 +9,10 @@ const Navbar = () => {
         <Stack direction={['column', 'column', 'row', 'row']} w={'100%'} ml={['', '', '100px', '100px']} mt={'20px'}>
             <Box className='logo'>
                 <Stack direction={'row'}>
-                    <Box w={'50%'}>
+                    <Box>
                         <Img src={"/tv.png"} alt="logo" height={"50px"} width={"50px"} />
                     </Box>
-                    <Box w={'50%'}>
+                    <Box>
                         <Heading color={'white'} fontSize={['20px', '20px', '20px', '20px']} pt={['', '', '10%', '10%']}>
                             MovieBox
                         </Heading>
