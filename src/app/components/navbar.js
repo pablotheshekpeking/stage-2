@@ -10,7 +10,7 @@ const Navbar = () => {
             <Box className='logo'>
                 <Stack direction={'row'}>
                     <Box>
-                        <Img src={"/tv.png"} alt="logo" height={"50"} width={"50"} />
+                        <Img src={"/tv.png"} alt="logo" height={"50px"} width={"50px"} />
                     </Box>
                     <Box>
                         <Heading color={'white'} fontSize={['20px', '20px', '30px', '30px']}>
