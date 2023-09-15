@@ -51,7 +51,6 @@ export default function Hero() {
 
 
               {/** imdb and rotten tomatoes */}
-              <Show above='lg'>
                 <Stack direction={'row'}>
                   <Box>
                     <Stack direction={'row'}>
@@ -66,7 +65,6 @@ export default function Hero() {
                     </Stack>
                   </Box>
                 </Stack>
-              </Show>
 
               
               <Stack direction={'row'}>
