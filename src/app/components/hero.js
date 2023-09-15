@@ -52,7 +52,7 @@ export default function Hero() {
 
               {/** imdb and rotten tomatoes */}
               <Show above='lg'>
-                <Stack direction={'row'} m={'auto'}>
+                <Stack direction={'row'}>
                   <Box w={'33%'}>
                     <Stack direction={'row'}>
                       <Box> <Img src={'/imdb.png'} w={'50px'} h={'auto'} /> </Box>

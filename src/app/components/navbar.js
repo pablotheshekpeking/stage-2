@@ -39,7 +39,7 @@ const Navbar = () => {
                         </Text>
                     </Box>
                     <Box>
-                        <HamburgerIcon borderRadius={'30px'} bg={'red.500'} color={'white'} padding={'10px'} />
+                        <HamburgerIcon borderRadius={'30px'} bg={'red.500'} padding={'10px'} color={'white'} />
                     </Box>
                 </Stack>
             </Box>
