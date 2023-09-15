@@ -30,7 +30,7 @@ const MovieGrid = () => {
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
+        gridTemplateColumns: "repeat(2, 1fr)",
         gap: "20px",
       }}
     >
