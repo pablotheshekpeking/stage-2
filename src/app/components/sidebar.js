@@ -27,7 +27,6 @@ const Sidebar = () => {
               bg={'white'}
               borderRadius={'0px 45px 45px 0px;'}
               border={'1px solid rgba(0, 0, 0, 0.30)'}
-              display={['none', 'none', 'none', 'block']}
             >
 
               <Stack
