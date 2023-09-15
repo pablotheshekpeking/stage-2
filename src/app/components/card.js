@@ -40,13 +40,13 @@ const Card = ({ movie }) => {
           </Text>
           {/** imdb and rotten tomatoes */}
             <Stack direction={'row'} m={'auto'}>
-              <Box w={'50%'}>
+              <Box w={['50%', '50%', '25%', '25%']}>
                 <Stack direction={'row'}>
                   <Box> <Img src={'/imdb.png'} /> </Box>
                   <Box><Text>8/10</Text></Box>
                 </Stack>
               </Box>
-              <Box w={'50%'}>
+              <Box w={['50%', '50%', '25%', '25%']}>
                 <Stack direction={'row'}>
                   <Box> <Img src={'/tom.png'} /> </Box>
                   <Box><Text>98%</Text></Box>
