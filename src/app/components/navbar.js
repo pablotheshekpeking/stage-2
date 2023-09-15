@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { Box, Stack, Heading, Text, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { Box, Stack, Heading, Img, Text, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { SearchIcon, HamburgerIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
             <Box className='logo'>
                 <Stack direction={'row'}>
                     <Box>
-                        <Image src={"/tv.png"} alt="logo" height={"50"} width={"50"} />
+                        <Img src={"/tv.png"} alt="logo" height={"50"} width={"50"} />
                     </Box>
                     <Box>
                         <Heading color={'white'} fontSize={['20px', '20px', '30px', '30px']}>
