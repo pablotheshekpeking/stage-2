@@ -39,23 +39,20 @@ const Card = ({ movie }) => {
             {movie.release_date}
           </Text>
           {/** imdb and rotten tomatoes */}
-          <Show above='lg'>
             <Stack direction={'row'} m={'auto'}>
-              <Box w={'33%'}>
+              <Box w={'50%'}>
                 <Stack direction={'row'}>
                   <Box> <Img src={'/imdb.png'} /> </Box>
                   <Box><Text>8/10</Text></Box>
                 </Stack>
               </Box>
-              <Box w={'33%'}></Box>
-              <Box w={'33%'}>
+              <Box w={'50%'}>
                 <Stack direction={'row'}>
                   <Box> <Img src={'/tom.png'} /> </Box>
                   <Box><Text>98%</Text></Box>
                 </Stack>
               </Box>
             </Stack>
-          </Show>
           <Text as={'h6'} mb={'10px'} data-testid="movie-title">{movie.title}</Text>
           <Text color={'#dddddd'}>{movie.genres?.map((genre) => genre.name).join(', ')}</Text>
         </Box>
