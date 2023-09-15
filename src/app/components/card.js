@@ -38,6 +38,7 @@ const Card = ({ movie }) => {
           <Text color={'#dddddd'} mb={'10px'} data-testid="movie-release-date">
             {movie.release_date}
           </Text>
+          {/** imdb and rotten tomatoes */}
           <Show above='lg'>
             <Stack direction={'row'} m={'auto'}>
               <Box w={'33%'}>

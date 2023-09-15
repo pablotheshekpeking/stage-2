@@ -48,6 +48,28 @@ export default function Hero() {
                 assassins' guild and with a $14 million price tag on his head, he is the target
                 of hit men and women everywhere.
               </Text>
+
+
+              {/** imdb and rotten tomatoes */}
+              <Show above='lg'>
+                <Stack direction={'row'} m={'auto'}>
+                  <Box w={'33%'}>
+                    <Stack direction={'row'}>
+                      <Box> <Img src={'/imdb.png'} /> </Box>
+                      <Box><Text>8/10</Text></Box>
+                    </Stack>
+                  </Box>
+                  <Box w={'33%'}></Box>
+                  <Box w={'33%'}>
+                    <Stack direction={'row'}>
+                      <Box> <Img src={'/tom.png'} /> </Box>
+                      <Box><Text>98%</Text></Box>
+                    </Stack>
+                  </Box>
+                </Stack>
+              </Show>
+
+              
               <Stack direction={'row'}>
                 <Button
                   bg={'red.400'}
