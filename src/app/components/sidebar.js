@@ -32,7 +32,7 @@ const Sidebar = () => {
 
               <Stack
                 m={'auto'}
-                direction={['row', 'row', 'column', 'column']}
+                direction={'column'}
                 w={'full'}
                 py={'50'}
                 spacing={'50'}
