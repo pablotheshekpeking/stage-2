@@ -132,7 +132,7 @@ export default async function MoviePage({ params }) {
                     data-testid="movie-runtime"
 
                   >
-                    {movie.runtime}m
+                    {movie.runtime}minutes
                   </Text>
 
 
