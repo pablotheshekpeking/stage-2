@@ -13,7 +13,7 @@ const Navbar = () => {
                         <Img src={"/tv.png"} alt="logo" height={"50px"} width={"50px"} />
                     </Box>
                     <Box w={'50%'}>
-                        <Heading color={'white'} fontSize={['20px', '20px', '20px', '20px']} pt={'10%'}>
+                        <Heading color={'white'} fontSize={['20px', '20px', '20px', '20px']} pt={['', '', '10%', '10%']}>
                             MovieBox
                         </Heading>
                     </Box>
