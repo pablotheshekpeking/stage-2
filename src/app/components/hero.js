@@ -87,18 +87,19 @@ export default function Hero() {
 
       {/** featured movies */}
       <Stack
+      w={'100%'}
         direction={'row'}
         mr={['', '', '100px', '100px']}
         ml={['', '', '100px', '100px']}
         mt={['50px', '50px', '100px', '100px']}
         mb={['50px', '50px', '100px', '100px']}
       >
-        <Box w={'25%'}>
+        <Box w={'50%'}>
           <Heading fontSize={['20px', '20px', '30px', '30px']}>
             Featured Movie
           </Heading>
         </Box>
-        <Box w={'25%'}>
+        <Box w={'50%'}>
           <Text color={'red.500'} textAlign={'right'} pt={'5px'}>
             <a href="http://">See more </a> <ChevronRightIcon color={'red.500'} />
           </Text>
