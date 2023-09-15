@@ -61,7 +61,7 @@ export default function Hero() {
                   </Box>
                   <Box w={'50%'}>
                     <Stack direction={'row'}>
-                      <Box> <Img src={'/tom.png'} w={'50px'} h={'auto'} /> </Box>
+                      <Box> <Img src={'/tom.png'} w={'30px'} h={'auto'} /> </Box>
                       <Box><Text color={'white'}>98%</Text></Box>
                     </Stack>
                   </Box>
