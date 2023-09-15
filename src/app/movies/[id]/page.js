@@ -49,14 +49,14 @@ export default async function MoviePage({ params }) {
   return (
 
     <>
-    <Sidebar />
+    
       <Box width={'full'}
         h={'auto'}
 
         bg={'white'}>
         <Stack direction={['column', 'column', 'row', 'row']}>
           
-            
+        <Sidebar />
           {/** <Hide below='md'>
             <Box
               width={'15%'}

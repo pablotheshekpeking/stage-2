@@ -1,146 +1,175 @@
 'use client'
-import React, { ReactNode } from 'react';
+
+import Image from "next/image"
 import {
-  IconButton,
   Box,
-  CloseButton,
-  Flex,
-  Icon,
-  useColorModeValue,
+  Stack,
   Text,
-  Drawer,
-  DrawerContent,
-  useDisclosure,
-  BoxProps,
-  FlexProps,
-} from '@chakra-ui/react';
-import {
-  FiHome,
-  FiTrendingUp,
-  FiCompass,
-  FiStar,
-  FiSettings,
-  FiMenu,
-} from 'react-icons/fi';
-import { IconType } from 'react-icons';
-import { ReactText } from 'react';
+  Center,
+  Hide,
+  Heading,
+  Button,
+} from "@chakra-ui/react";
 
-const LinkItems = [
-  { name: 'Home', icon: FiHome },
-  { name: 'Movies', icon: FiTrendingUp },
-  { name: 'TV Series', icon: FiCompass },
-  { name: 'Upcoming', icon: FiStar },
-  { name: 'Log out', icon: FiSettings },
-];
+import { AiOutlineUnorderedList } from "react-icons/ai";
 
-export default function Sidebar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+import { GiTicket } from "react-icons/gi";
+import { BsFillPlayFill } from "react-icons/bs";
+import Link from "next/link";
 
-  return (
-    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
-      <SidebarContent onClose={() => onClose} display={{ base: 'none', md: 'block' }} />
-      <Drawer
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        returnFocusOnClose={false}
-        onOverlayClick={onClose}
-        size="full">
-        <DrawerContent>
-          <SidebarContent onClose={onClose} />
-        </DrawerContent>
-      </Drawer>
-      {/* mobilenav */}
-      <MobileNav display={{ base: 'flex', md: 'none' }} onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }} p="4">
-        {/* Content */}
-      </Box>
-    </Box>
-  );
+const Sidebar = () => {
+  return ( 
+          
+            <Box
+              width={'15%'}
+              h={'auto'}
+
+              bg={'white'}
+              borderRadius={'0px 45px 45px 0px;'}
+              border={'1px solid rgba(0, 0, 0, 0.30)'}
+            >
+
+              <Stack
+                m={'auto'}
+                direction={['row', 'row', 'column', 'column']}
+                w={'full'}
+                py={'50'}
+                spacing={'50'}
+                px={'5'}
+              >
+                <Link href={'../'}><Box
+                  m={'auto'}
+                  width={'full'}
+                  h={'50px'}
+                  display={"flex"}
+                  justifyContent={"space-around"}
+                  alignItems={"center"}
+
+                >
+                  <Image src={"/tv.png"} alt="logo" height={"50"} width={"50"} />
+
+                  <Text fontWeight={"700"} fontSize={"24px"} color={"black"}>
+                    MovieBox
+                  </Text>
+                </Box></Link>
+                <Box
+                  m={'auto'}
+                  width={'full'}
+                  h={'50px'}
+                  display={"flex"}
+                  justifyContent={"space-around"}
+                  alignItems={"center"}
+                  p={'5'}
+                >
+                  <Image src={"/Home.png"} alt="logo" height={"25"} width={"25"} />
+
+                  <Text fontWeight={"600"} fontSize={"20px"} color={"#666"}>
+                    MovieBox
+                  </Text>
+                </Box>
+                <Box
+                  m={'auto'}
+                  width={'full'}
+                  h={'50px'}
+                  display={"flex"}
+                  justifyContent={"space-around"}
+                  alignItems={"center"}
+                  p={'5'}
+                >
+                  <Image src={"/movies.png"} alt="logo" height={"25"} width={"25"} />
+
+                  <Text fontWeight={"600"} fontSize={"20px"} color={"#666"}>
+                    Movies
+                  </Text>
+                </Box>
+                <Box
+                  m={'auto'}
+                  width={'full'}
+                  h={'50px'}
+                  display={"flex"}
+                  justifyContent={"space-around"}
+                  alignItems={"center"}
+                  p={'5'}
+                >
+                  <Image src={"/tvshow.png"} alt="logo" height={"25"} width={"25"} />
+
+                  <Text fontWeight={"600"} fontSize={"20px"} color={"#666"}>
+                    TV Series
+                  </Text>
+                </Box>
+                <Box
+                  m={'auto'}
+                  width={'full'}
+                  h={'50px'}
+                  display={"flex"}
+                  justifyContent={"space-around"}
+                  alignItems={"center"}
+                  p={'5'}
+                >
+                  <Image src={"/cal.png"} alt="logo" height={"25"} width={"25"} />
+
+                  <Text fontWeight={"600"} fontSize={"20px"} color={"#666"}>
+                    Upcoming
+                  </Text>
+                </Box>
+              </Stack>
+              <Box
+                px={'10%'}
+                pt={'42px'}
+                w={'90%'}
+                h={'210px'}
+                m={'auto'}
+                bg={'rgba(248, 231, 235, 0.40)'}
+                borderRadius={'20px'}
+                border={'1px solid rgba(190, 18, 60, 0.70)'}
+              >
+                <Text
+                  fontSize={'20px'}
+                  fontWeight={'600'}
+                  color={'rgba(51, 51, 51, 0.80)'}
+                >
+                  Play movie quizes
+                  and earn
+                  free tickets
+                </Text>
+                <Text
+                  color={'#666'}
+                  fontSize={'15px'}
+                  fontWeight={'500'}
+                >
+                  50k people are playing
+                  now
+                </Text>
+              </Box>
+              <Stack
+                m={'auto'}
+                direction={'column'}
+                w={'full'}
+                py={'50'}
+                spacing={'50'}
+                px={'5'}
+              >
+                <Box
+                  m={'auto'}
+                  width={'full'}
+                  h={'50px'}
+                  display={"flex"}
+                  justifyContent={"space-around"}
+                  alignItems={"center"}
+                  p={'5'}
+                >
+                  <Image src={"/Logout.png"} alt="logo" height={"25"} width={"25"} />
+
+                  <Text fontWeight={"600"} fontSize={"20px"} color={"#666"}>
+                    Logout
+                  </Text>
+                </Box>
+
+
+              </Stack>
+
+            </Box>
+   );
 }
-
-const SidebarContent = ({ onClose, ...rest }) => {
-  return (
-    <Box
-      bg={useColorModeValue('white', 'gray.900')}
-      borderRight="1px"
-      borderRightColor={useColorModeValue('gray.200', 'gray.700')}
-      w={{ base: 'full', md: 60 }}
-      pos="fixed"
-      h="full"
-      {...rest}>
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          Logo
-        </Text>
-        <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
-      </Flex>
-      {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
-          {link.name}
-        </NavItem>
-      ))}
-    </Box>
-  );
-};
-
-const NavItem = ({ icon, children, ...rest }) => {
-  return (
-    <Box
-      as="a"
-      href="#"
-      style={{ textDecoration: 'none' }}
-      _focus={{ boxShadow: 'none' }}>
-      <Flex
-        align="center"
-        p="4"
-        mx="4"
-        borderRadius="lg"
-        role="group"
-        cursor="pointer"
-        _hover={{
-          bg: 'cyan.400',
-          color: 'white',
-        }}
-        {...rest}>
-        {icon && (
-          <Icon
-            mr="4"
-            fontSize="16"
-            _groupHover={{
-              color: 'white',
-            }}
-            as={icon}
-          />
-        )}
-        {children}
-      </Flex>
-    </Box>
-  );
-};
-
-const MobileNav = ({ onOpen, ...rest }) => {
-  return (
-    <Flex
-      ml={{ base: 0, md: 60 }}
-      px={{ base: 4, md: 24 }}
-      height="20"
-      alignItems="center"
-      bg={useColorModeValue('white', 'gray.900')}
-      borderBottomWidth="1px"
-      borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
-      justifyContent="flex-start"
-      {...rest}>
-      <IconButton
-        variant="outline"
-        onClick={onOpen}
-        aria-label="open menu"
-        icon={<FiMenu />}
-      />
-
-      <Text fontSize="2xl" ml="8" fontFamily="monospace" fontWeight="bold">
-        Logo
-      </Text>
-    </Flex>
-  );
-};
+ 
+export default Sidebar;
