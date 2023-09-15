@@ -55,14 +55,14 @@ export default function Hero() {
                 <Stack direction={'row'} m={'auto'}>
                   <Box w={'33%'}>
                     <Stack direction={'row'}>
-                      <Box> <Img src={'/imdb.png'} w={'50px'} h={'50px'} /> </Box>
+                      <Box> <Img src={'/imdb.png'} w={'50px'} h={'auto'} /> </Box>
                       <Box><Text color={'white'}>8/10</Text></Box>
                     </Stack>
                   </Box>
                   <Box w={'33%'}></Box>
                   <Box w={'33%'}>
                     <Stack direction={'row'}>
-                      <Box> <Img src={'/tom.png'} w={'50px'} h={'50px'} /> </Box>
+                      <Box> <Img src={'/tom.png'} w={'50px'} h={'auto'} /> </Box>
                       <Box><Text color={'white'}>98%</Text></Box>
                     </Stack>
                   </Box>
