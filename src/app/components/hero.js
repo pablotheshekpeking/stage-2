@@ -93,12 +93,12 @@ export default function Hero() {
         mt={['50px', '50px', '100px', '100px']}
         mb={['50px', '50px', '100px', '100px']}
       >
-        <Box w={'50%'}>
+        <Box w={'25%'}>
           <Heading fontSize={['20px', '20px', '30px', '30px']}>
             Featured Movie
           </Heading>
         </Box>
-        <Box w={'50%'}>
+        <Box w={'25%'}>
           <Text color={'red.500'} textAlign={'right'} pt={'5px'}>
             <a href="http://">See more </a> <ChevronRightIcon color={'red.500'} />
           </Text>
