@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
 
         <Stack direction={['column', 'column', 'row', 'row']} w={'100%'} ml={['', '', '100px', '100px']} mt={'20px'}>
-            <Box className='logo'>
+            <Box className='logo' w={'20%'}>
                 <Stack direction={'row'}>
                     <Box w={'50px'} pr={'0px'}>
                         <Img src={"/tv.png"} alt="logo" height={"50px"} width={"50px"} />
@@ -30,11 +30,11 @@ const Navbar = () => {
 
 
             {/** search bar */}
-            <Box ml={['', '', '20%', '20%']} mr={['', '', '20%', '20%']}>
+            <Box ml={['', '', '20%', '20%']} mr={['', '', '20%', '20%']} w={'60%'}>
                 <Search onSearch={handleSearch} />
             </Box>
 
-            <Box>
+            <Box w={'20%'}>
                 <Stack direction={'row'}>
                     <Box>
                         <Text color={'white'}>
