@@ -3,7 +3,7 @@
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
 import { Grid, GridItem } from "@chakra-ui/react";
-import React from 'react';
+import React, { useState } from 'react';
 import Hero from './components/hero';
 import Card from './components/card'
 import Footer from './components/footer';

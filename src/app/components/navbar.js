@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Box, Stack, Heading, Img, Text, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { SearchIcon, HamburgerIcon } from '@chakra-ui/icons';
+import React, { useState } from 'react';
 import Search from "./searchbar";
 
 const Navbar = () => {
