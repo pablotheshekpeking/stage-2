@@ -1,8 +1,6 @@
 
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
-import React, { useState } from 'react';
-import Image from "next/image"
 import {
   Box,
   Stack,
@@ -50,8 +48,6 @@ export default async function MoviePage({ params }) {
     );
   }
   return (
-    <CacheProvider>
-      <ChakraProvider>
 
         <>
 
@@ -323,7 +319,5 @@ export default async function MoviePage({ params }) {
           </Box>
         </>
 
-      </ChakraProvider>
-    </CacheProvider>
   )
 }
