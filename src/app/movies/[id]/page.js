@@ -1,4 +1,6 @@
 
+import { CacheProvider } from '@chakra-ui/next-js';
+import { ChakraProvider } from '@chakra-ui/react';
 import Image from "next/image"
 import {
   Box,
@@ -47,277 +49,280 @@ export default async function MoviePage({ params }) {
     );
   }
   return (
+    <CacheProvider>
+      <ChakraProvider>
 
-    <>
+        <>
 
-      <Box width={'full'}
-        h={'auto'}
-
-        bg={'white'}>
-        <Stack direction={'row'}>
-          {/** sidebar */}
-          <Hide below="md"><Sidebar /></Hide>
-
-          {/** page content */}
-          <Box
-
-            width={['100%', '100%', '100%', '85%']}
+          <Box width={'full'}
             h={'auto'}
 
-            bg={'white'}
-            py={'5'}
-          >
-            <Center
-              borderRadius={'20px'}
-              m={'auto'}
-              width={'95%'}
-              h={'450px'}
+            bg={'white'}>
+            <Stack direction={'row'}>
+              {/** sidebar */}
+              <Hide below="md"><Sidebar /></Hide>
 
-              bgImage={`url('${img}')`}
-              bgPosition="50% 50%"
-              bgRepeat="no-repeat"
-              bgSize={'cover'}
-              position={'relative'}
-
-            >
-              <Button borderRadius={'50%'} border={'1px solid #999'} h={100} backdropFilter={'blur(5px)'} bg={'transparent'}><BsFillPlayFill color="white" fontSize={'80px'} /></Button>
-
-            </Center>
-
-            <Stack
-              m={'auto'}
-              direction={'row'}
-              w={'full'}
-              py={'50'}
-              spacing={'50'}
-              px={'5'}
-            >
+              {/** page content */}
               <Box
-                m={'auto'}
-                width={['100%', '100%', '70%', '70%']}
+
+                width={['100%', '100%', '100%', '85%']}
                 h={'auto'}
 
-
+                bg={'white'}
+                py={'5'}
               >
-
-                <Stack
-                  direction={'row'}
-                  maxW={'3xl'}
-                  w={'100%'}
-                  h={'50px'}
-                  bg={'white'}
-                  alignItems={'center'}
-                >
-                  <Heading
-                    fontSize={'23px'}
-                    fontWeight={'700'}
-                    color={'#404040'}
-                    display={'flex'}
-                    data-testid="movie-title"
-                  >
-                    {movie.title || movie.name}
-                    •
-                  </Heading>
-                  <Text
-                    data-testid="movie-release-date"
-                  >
-                    {movie.release_date}
-                  </Text>
-
-
-                  •
-                  PG-13
-                  •
-                  <Text
-                    data-testid="movie-runtime"
-
-                  >
-                    {movie.runtime}minutes
-                  </Text>
-
-
-                  <Button
-                    bg={'#F8E7EB'}
-                    h={'35px'}
-                    w={'85px'}
-                    borderRadius={'25px'}
-                    border={'1px solid #BE123C'}
-                    color={'#B91C1C'}
-
-                  >Action</Button>
-                  <Button
-                    bg={'#F8E7EB'}
-                    h={'35px'}
-                    w={'85px'}
-                    borderRadius={'25px'}
-                    border={'1px solid #BE123C'}
-                    color={'#B91C1C'}
-                  >Drama</Button>
-
-                </Stack>
-
-                <Text
-                  data-testid="movie-overview"
-                  fontSize={'18px'}
-                  fontWeight={'400'}
-                  color={'#333'}
-                  mt={'5'}
-                >
-                  {movie.overview}
-                </Text>
-                <Text w={'full'} fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} mt={'10'}>
-                  Director : <Text color={'#BE123C'}>{movie?.credits?.crew?.find(crew => crew.job === 'Director')?.name || 'N/A'}</Text>
-                </Text>
-                <Text fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} mt={'10'}>
-                  Writers : <Text color={'#BE123C'}>
-                    {movie?.credits?.crew
-                      ?.filter(crew => crew.job === 'Screenplay' || crew.job === 'Writer')
-                      .map(writer => writer.name)
-                      .join(', ') || 'N/A'}
-                  </Text>
-                </Text>
-                <Text fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} my={'10'}>
-                  Stars : <Text color={'#BE123C'}>
-                    {movie?.credits?.cast?.slice(0, 3).map(actor => actor.name).join(', ') || 'N/A'}
-                  </Text>
-                </Text>
-
-
-                <Box
-                  border={'1px solid #999'}
-                  w={'100%'}
-                  display={'flex'}
+                <Center
+                  borderRadius={'20px'}
                   m={'auto'}
-                  bg={'#BE123C'}
-                  borderRadius={'10px'}
-                  alignItems={'center'} h={'55px'}
-                >
+                  width={'95%'}
+                  h={'450px'}
 
-                  <Box
-                    w={'50%'}
-                    h={'auto'}
-                    bg={'#BE123C'}
-                    borderRadius={'10px'}
-
-                    px={'20px'}
-                  >
-                    <Text
-                      color={'white'}
-                      fontSize={'20px'}
-
-                      fontWeight={'500'} m={'auto'}
-                    >
-                      Top rated movie #{movie.id}
-                    </Text>
-
-                  </Box>
-                  <Box
-                    borderTop={'1px solid #999'}
-                    borderBottom={'1px solid #999'}
-                    borderRadius={'10px'}
-                    py={'12px'}
-                    px={'5'}
-                    w={'full'}
-                    h={'f'}
-                    bg={'#fff'}
-                    alignItems={'center'}
-                  >
-                    <Text
-                      color={'#333'}
-                      fontSize={'20px'}
-
-                      fontWeight={'500'} m={'auto'}
-                    >
-                      Awards
-                      9 nominations
-                    </Text>
-
-                  </Box>
-                </Box>
-              </Box>
-              <Box
-                m={'auto'}
-                width={['100%', '100%', '30%', '30%']}
-                h={'450px'}
-
-
-              >
-                <Stack direction={'column'}>
-                  <Box w={'100%'}><Button
-                    mt={'10'}
-                    bg={'#BE123C'}
-                    h={'55px'}
-                    w={'100%'}
-                    borderRadius={'10px'}
-                    border={'1px solid #BE123C'}
-                    color={'white'}
-                    textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
-                    leftIcon={<GiTicket />}
-                  >See Showtimes</Button></Box>
-                  <Box w={'100%'}><Button
-                    mt={'5'}
-                    bg={'rgba(190, 18, 60, 0.10)'}
-                    h={'55px'}
-                    w={'100%'}
-                    borderRadius={'10px'}
-                    border={'1px solid #BE123C'}
-                    color={'#333'}
-                    textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
-                    leftIcon={<AiOutlineUnorderedList />}
-                  >More watch options</Button></Box>
-                </Stack>
-
-
-
-                <Box
-                  borderRadius={'10px'}
-                  pt={'180px'}
-                  mt={'10'}
-                  w={'full'}
-                  bgImage="url('/rect.png')"
+                  bgImage={`url('${img}')`}
                   bgPosition="50% 50%"
                   bgRepeat="no-repeat"
                   bgSize={'cover'}
                   position={'relative'}
-                  h={'230px'}
-                  display={'block'}
-                  justifyContent={"end"}
+
+                >
+                  <Button borderRadius={'50%'} border={'1px solid #999'} h={100} backdropFilter={'blur(5px)'} bg={'transparent'}><BsFillPlayFill color="white" fontSize={'80px'} /></Button>
+
+                </Center>
+
+                <Stack
+                  m={'auto'}
+                  direction={'row'}
+                  w={'full'}
+                  py={'50'}
+                  spacing={'50'}
+                  px={'5'}
                 >
                   <Box
-                    display={'flex'}
-                    justifyContent={'space-evenly'}
-                    alignItems='center'
-                    color={'white'}
-                    borderRadius={'10px'}
-                    w={'full'}
-                    h={'50px'}
-                    mt={'180px'}
-                    bg={'rgba(18, 18, 18, 0.50)'}
-                    backdropFilter={'blur(2px)'}
+                    m={'auto'}
+                    width={['100%', '100%', '70%', '70%']}
+                    h={'auto'}
 
-                  ><AiOutlineUnorderedList />
-                    <Text
 
-                      color={'#E8E8E8'}
-                      fontSize={'14px'}
+                  >
 
-                      fontWeight={'500'}
+                    <Stack
+                      direction={'row'}
+                      maxW={'3xl'}
+                      w={'100%'}
+                      h={'50px'}
+                      bg={'white'}
+                      alignItems={'center'}
                     >
+                      <Heading
+                        fontSize={'23px'}
+                        fontWeight={'700'}
+                        color={'#404040'}
+                        display={'flex'}
+                        data-testid="movie-title"
+                      >
+                        {movie.title || movie.name}
+                        •
+                      </Heading>
+                      <Text
+                        data-testid="movie-release-date"
+                      >
+                        {movie.release_date}
+                      </Text>
 
-                      The Best Movies and Shows in September
+
+                      •
+                      PG-13
+                      •
+                      <Text
+                        data-testid="movie-runtime"
+
+                      >
+                        {movie.runtime}minutes
+                      </Text>
+
+
+                      <Button
+                        bg={'#F8E7EB'}
+                        h={'35px'}
+                        w={'85px'}
+                        borderRadius={'25px'}
+                        border={'1px solid #BE123C'}
+                        color={'#B91C1C'}
+
+                      >Action</Button>
+                      <Button
+                        bg={'#F8E7EB'}
+                        h={'35px'}
+                        w={'85px'}
+                        borderRadius={'25px'}
+                        border={'1px solid #BE123C'}
+                        color={'#B91C1C'}
+                      >Drama</Button>
+
+                    </Stack>
+
+                    <Text
+                      data-testid="movie-overview"
+                      fontSize={'18px'}
+                      fontWeight={'400'}
+                      color={'#333'}
+                      mt={'5'}
+                    >
+                      {movie.overview}
+                    </Text>
+                    <Text w={'full'} fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} mt={'10'}>
+                      Director : <Text color={'#BE123C'}>{movie?.credits?.crew?.find(crew => crew.job === 'Director')?.name || 'N/A'}</Text>
+                    </Text>
+                    <Text fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} mt={'10'}>
+                      Writers : <Text color={'#BE123C'}>
+                        {movie?.credits?.crew
+                          ?.filter(crew => crew.job === 'Screenplay' || crew.job === 'Writer')
+                          .map(writer => writer.name)
+                          .join(', ') || 'N/A'}
+                      </Text>
+                    </Text>
+                    <Text fontSize={'18px'} fontWeight={'400'} color={'#333'} display={'flex'} my={'10'}>
+                      Stars : <Text color={'#BE123C'}>
+                        {movie?.credits?.cast?.slice(0, 3).map(actor => actor.name).join(', ') || 'N/A'}
+                      </Text>
                     </Text>
 
+
+                    <Box
+                      border={'1px solid #999'}
+                      w={'100%'}
+                      display={'flex'}
+                      m={'auto'}
+                      bg={'#BE123C'}
+                      borderRadius={'10px'}
+                      alignItems={'center'} h={'55px'}
+                    >
+
+                      <Box
+                        w={'50%'}
+                        h={'auto'}
+                        bg={'#BE123C'}
+                        borderRadius={'10px'}
+
+                        px={'20px'}
+                      >
+                        <Text
+                          color={'white'}
+                          fontSize={'20px'}
+
+                          fontWeight={'500'} m={'auto'}
+                        >
+                          Top rated movie #{movie.id}
+                        </Text>
+
+                      </Box>
+                      <Box
+                        borderTop={'1px solid #999'}
+                        borderBottom={'1px solid #999'}
+                        borderRadius={'10px'}
+                        py={'12px'}
+                        px={'5'}
+                        w={'full'}
+                        h={'f'}
+                        bg={'#fff'}
+                        alignItems={'center'}
+                      >
+                        <Text
+                          color={'#333'}
+                          fontSize={'20px'}
+
+                          fontWeight={'500'} m={'auto'}
+                        >
+                          Awards
+                          9 nominations
+                        </Text>
+
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Box
+                    m={'auto'}
+                    width={['100%', '100%', '30%', '30%']}
+                    h={'450px'}
+
+
+                  >
+                    <Stack direction={'column'}>
+                      <Box w={'100%'}><Button
+                        mt={'10'}
+                        bg={'#BE123C'}
+                        h={'55px'}
+                        w={'100%'}
+                        borderRadius={'10px'}
+                        border={'1px solid #BE123C'}
+                        color={'white'}
+                        textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
+                        leftIcon={<GiTicket />}
+                      >See Showtimes</Button></Box>
+                      <Box w={'100%'}><Button
+                        mt={'5'}
+                        bg={'rgba(190, 18, 60, 0.10)'}
+                        h={'55px'}
+                        w={'100%'}
+                        borderRadius={'10px'}
+                        border={'1px solid #BE123C'}
+                        color={'#333'}
+                        textShadow={'0px 2px 4px rgba(0, 0, 0, 0.20)'}
+                        leftIcon={<AiOutlineUnorderedList />}
+                      >More watch options</Button></Box>
+                    </Stack>
+
+
+
+                    <Box
+                      borderRadius={'10px'}
+                      pt={'180px'}
+                      mt={'10'}
+                      w={'full'}
+                      bgImage="url('/rect.png')"
+                      bgPosition="50% 50%"
+                      bgRepeat="no-repeat"
+                      bgSize={'cover'}
+                      position={'relative'}
+                      h={'230px'}
+                      display={'block'}
+                      justifyContent={"end"}
+                    >
+                      <Box
+                        display={'flex'}
+                        justifyContent={'space-evenly'}
+                        alignItems='center'
+                        color={'white'}
+                        borderRadius={'10px'}
+                        w={'full'}
+                        h={'50px'}
+                        mt={'180px'}
+                        bg={'rgba(18, 18, 18, 0.50)'}
+                        backdropFilter={'blur(2px)'}
+
+                      ><AiOutlineUnorderedList />
+                        <Text
+
+                          color={'#E8E8E8'}
+                          fontSize={'14px'}
+
+                          fontWeight={'500'}
+                        >
+
+                          The Best Movies and Shows in September
+                        </Text>
+
+                      </Box>
+
+                    </Box>
                   </Box>
 
-                </Box>
+                </Stack>
               </Box>
-
             </Stack>
           </Box>
-        </Stack>
-      </Box>
-    </>
+        </>
 
-
+      </ChakraProvider>
+    </CacheProvider>
   )
 }
