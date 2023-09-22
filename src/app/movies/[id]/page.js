@@ -1,6 +1,7 @@
 
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
+import React, { useState } from 'react';
 import Image from "next/image"
 import {
   Box,
