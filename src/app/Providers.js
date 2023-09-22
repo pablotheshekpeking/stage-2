@@ -10,13 +10,19 @@ import Footer from './components/footer';
 import MovieGrid from './components/MovieGrid';
 
 export function Providers({ children }) {
+  const [searchResults, setSearchResults] = useState([]);
+
+  // Callback function to receive search results
+  const handleSearch = (results) => {
+    setSearchResults(results);
+  };
   return (
     <CacheProvider>
       <ChakraProvider>
 
         <Hero />
 
-        <MovieGrid />
+        <MovieGrid initialMovies={searchResults} />
 
 
 

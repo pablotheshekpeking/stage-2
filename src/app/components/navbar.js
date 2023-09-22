@@ -2,8 +2,15 @@
 import Image from "next/image";
 import { Box, Stack, Heading, Img, Text, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { SearchIcon, HamburgerIcon } from '@chakra-ui/icons';
+import Search from "./searchbar";
 
 const Navbar = () => {
+    const [searchResults, setSearchResults] = useState([]);
+
+  // Callback function to receive search results
+  const handleSearch = (results) => {
+    setSearchResults(results);
+  };
     return (
 
         <Stack direction={['column', 'column', 'row', 'row']} w={'100%'} ml={['', '', '100px', '100px']} mt={'20px'}>
@@ -23,12 +30,7 @@ const Navbar = () => {
 
             {/** search bar */}
             <Box ml={['', '', '20%', '20%']} mr={['', '', '20%', '20%']}>
-                <InputGroup>
-                    <Input type='search' placeholder='What do you want to watch?' width={['100%', '100%', '500px', '500px']} border={'2px'} color={'white'} />
-                    <InputRightElement pointerEvents='none'>
-                        <SearchIcon color='white' />
-                    </InputRightElement>
-                </InputGroup>
+                <Search onSearch={handleSearch} />
             </Box>
 
             <Box>
