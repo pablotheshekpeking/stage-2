@@ -30,7 +30,7 @@ const Navbar = () => {
 
 
             {/** search bar */}
-            <Box  w={'60%'}>
+            <Box ml={['', '', '20%', '20%']} mr={['', '', '20%', '20%']} w={'60%'} m={'auto'}>
                 <Search onSearch={handleSearch} w={'100%'} />
             </Box>
 
